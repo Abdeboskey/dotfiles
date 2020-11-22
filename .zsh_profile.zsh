@@ -1,4 +1,4 @@
-echo "You're a very good boi, sir."
+echo "What do you notice?"
 
 # Load version control information
 autoload -Uz vcs_info
@@ -29,3 +29,9 @@ parse_git_dirty() {
 setopt PROMPT_SUBST
 PROMPT='%F{magenta}%d
 $(git_branch_color)${vcs_info_msg_0_}%f🌀 '
+
+# added by travis gem
+[ -f /Users/aaronburris-deboskey/.travis/travis.sh ] && source /Users/aaronburris-deboskey/.travis/travis.sh
+
+# path for postgres
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
